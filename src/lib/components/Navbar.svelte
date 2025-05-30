@@ -1,9 +1,16 @@
 <script>
   import { onMount } from 'svelte';
-  let scrolled = false;
+  let detached = false;
+  let lastScrollY = 0;
 
   function handleScroll() {
-    scrolled = window.scrollY > 80;
+    const currentY = window.scrollY;
+    if (currentY <= 80) {
+      detached = false;
+    } else if (currentY > 80) {
+      detached = true;
+    }
+    lastScrollY = currentY;
   }
 
   onMount(() => {
@@ -12,12 +19,34 @@
   });
 </script>
 
-<nav class="navbar {scrolled ? 'scrolled' : ''}">
-  <div class="navbar-content">
-    <div class="navbar-title">Sameer Jangda</div>
+<nav
+  class="navbar"
+  style="
+    top: 1rem;
+    width: 68%;
+    border-radius: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(8px);
+    background: transparent;
+  "
+>
+  <div
+    class="navbar-bg"
+    style="
+      border-radius: 0.75rem;
+      background: linear-gradient(to bottom, rgba(9, 9, 9, 0.85) 0%, rgba(45,24,70,0.85) 100%);
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      box-shadow: 0 6px 24px 0 rgba(255,255,255,0.07);
+    "
+  ></div>
+  <div class="navbar-content" style="position: relative; z-index: 1;">
+    <div class="navbar-title">PLACEHOLDER</div>
     <div class="navbar-links">
       <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
@@ -26,35 +55,24 @@
 
 <style>
 .navbar {
-  position: sticky;
-  top: 0;
+  position: fixed;
   left: 0;
   right: 0;
-  width: 100%;
-  background: black;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition:
-    background 0.3s,
-    backdrop-filter 0.3s,
-    margin-top 0.3s,
-    width 0.3s,
-    border-radius 0.3s;
+    top 0.18s,
+    width 0.5s cubic-bezier(0.4,0,0.2,1),
+    border-radius 0.18s,
+    backdrop-filter 0.18s,
+    background 0.3s;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
-.navbar.scrolled {
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
-  margin-top: 2.5rem;
-  width: 70%;
-  border-radius: 0.75rem;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+.navbar-bg {
+  /* All styles are inline for dynamic border-radius */
 }
 .navbar-content {
   display: flex;
@@ -85,6 +103,7 @@
   padding: 0.75rem 1.25rem;
   border-radius: 4px;
   transition: background 0.2s;
+  font-weight: 400;
 }
 .navbar-links a:hover {
   background: #282828;
