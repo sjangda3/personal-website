@@ -87,7 +87,7 @@
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.75rem 1.25rem;
-  border-radius: 4px;
+  border-radius: 3.5px;
   transition: background 0.2s, transform 0.18s cubic-bezier(0.4,0,0.2,1);
   font-weight: 400;
 }
