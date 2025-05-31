@@ -1,24 +1,3 @@
-<script>
-  import { onMount } from 'svelte';
-  let detached = false;
-  let lastScrollY = 0;
-
-  function handleScroll() {
-    const currentY = window.scrollY;
-    if (currentY <= 80) {
-      detached = false;
-    } else if (currentY > 80) {
-      detached = true;
-    }
-    lastScrollY = currentY;
-  }
-
-  onMount(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  });
-</script>
-
 <nav
   class="navbar"
   style="
@@ -44,7 +23,14 @@
     "
   ></div>
   <div class="navbar-content" style="position: relative; z-index: 1;">
-    <div class="navbar-title">PLACEHOLDER</div>
+    <div class="navbar-title">
+      <button class="home-btn" aria-label="Home" on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12L12 5L20 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5 12V19H19V12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
     <div class="navbar-links">
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
@@ -102,10 +88,25 @@
   font-size: 1.1rem;
   padding: 0.75rem 1.25rem;
   border-radius: 4px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.18s cubic-bezier(0.4,0,0.2,1);
   font-weight: 400;
 }
 .navbar-links a:hover {
-  background: #282828;
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.08);
+}
+.home-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s, transform 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+.home-btn:hover {
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.08);
 }
 </style>
