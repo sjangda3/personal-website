@@ -50,4 +50,8 @@ hr {
     width: 90%;
   }
 }
+
+html {
+  scroll-padding-top: 4.5rem;
+}
   

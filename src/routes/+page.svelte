@@ -33,7 +33,7 @@
 </style>
 
 <div class="main-content">
-  <section id="intro" style="min-height: 30vh; padding-top: 7.5rem;">
+  <section id="intro" style="min-height: 30vh; padding-top: 6.5rem;">
     <h1 class="sameer-heading">Hi, I'm Sameer Jangda</h1>
     <!-- Add your intro content here -->
   </section>
