@@ -99,7 +99,7 @@
   100% { transform: scale(1.1) translateY(-40px);}
 }
 @keyframes blobPulse {
-  0% { filter: blur(80px) brightness(1); }
+  0% { filter: blur(80px) brightness(2); }
   100% { filter: blur(100px) brightness(1.15); }
 }
 </style> 

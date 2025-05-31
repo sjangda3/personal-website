@@ -28,10 +28,14 @@
   opacity: 0.5;
   pointer-events: none;
   z-index: 0;
-  animation: blobMove 18s infinite alternate ease-in-out;
+  animation: blobMove 18s infinite alternate ease-in-out, blobPulse 8s infinite alternate ease-in-out;
 }
 @keyframes blobMove {
   0% { transform: scale(1) translateY(0);}
   100% { transform: scale(1.1) translateY(-40px);}
+}
+@keyframes blobPulse {
+  0% { filter: blur(80px) brightness(1); }
+  100% { filter: blur(100px) brightness(1.15); }
 }
 </style> 
