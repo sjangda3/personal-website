@@ -32,7 +32,7 @@
 }
 .intro-buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin-top: 1.1rem;
 }
 .intro-btn {
@@ -44,7 +44,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: .9rem;
-  padding: 0.75rem 2.405rem;
+  padding: 0.75rem 2.3rem;
   border: none;
   border-radius: 0.4rem;
   text-decoration: none;
@@ -55,6 +55,97 @@
   background:rgb(242, 146, 237);
   color: #222;
   transform: scale(1.06);
+}
+.contact-card {
+  background: #23232a;
+  border-radius: 1rem;
+  padding: 2.2rem 2.5rem;
+  margin: 2.5rem auto 0 auto;
+  max-width: 1100px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  border: 1px solid #353545;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(83,203,233,0.1), rgba(242,146,237,0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 6px 32px 0 rgba(83,203,233,0.13), 0 2px 12px 0 rgba(0,0,0,0.13);
+  border-color: rgba(83,203,233,0.3);
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 1.18rem;
+  color: #eaf6ff;
+  transition: transform 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card:hover .contact-row {
+  transform: translateX(8px);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.2) rotate(2deg);
+}
+
+.contact-link {
+  color: #eaf6ff;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.18rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #53cbe9, #f292ed);
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #aeefff;
+}
+
+.contact-link:hover::after {
+  width: 100%;
 }
 </style>
 
@@ -72,7 +163,7 @@
         LinkedIn
       </a>
       <a class="intro-btn" href="https://github.com/sjangda3" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.563.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.2-6.085 8.2-11.386 0-6.627-5.373-12-12-12z"/></svg>
         GitHub
       </a>
       <a class="intro-btn" href="/resume.pdf" target="_blank" rel="noopener" aria-label="Resume">
@@ -83,9 +174,34 @@
   </section>
   <EducationSection />
   <ProjectsSection />
-  <section id="contact" style="min-height: 40vh; padding-top: 2rem;">
-    <h1 class="section-heading">Contact</h1>
-    <!-- Add your contact content here -->
+  <section id="contact" style="min-height: 40vh; padding-top: 4rem;">
+    <h1 class="section-heading">Get in Touch</h1>
+    <div class="contact-card">
+      <div class="contact-row">
+        <span class="contact-icon"> <!-- email icon -->
+          <svg width="22" height="22" fill="none" stroke="#eaf6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>
+        </span>
+        <a class="contact-link" href="mailto:sameer.jangda@gmail.com">sameer.jangda@email.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon"> <!-- github icon -->
+          <svg width="22" height="22" fill="none" stroke="#eaf6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.338 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+        </span>
+        <a class="contact-link" href="https://github.com/sjangda3" target="_blank" rel="noopener">sjangda3</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon"> <!-- linkedin icon -->
+          <svg width="22" height="22" fill="none" stroke="#eaf6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 8a4 4 0 0 1 4 4v6M8 8v10M8 12h.01M16 12h.01"/></svg>
+        </span>
+        <a class="contact-link" href="https://linkedin.com/in/sameerjangda/" target="_blank" rel="noopener">/in/sameerjangda</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon"> <!-- location icon -->
+          <svg width="22" height="22" fill="none" stroke="#eaf6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 21c-4.418 0-8-5.373-8-10a8 8 0 1 1 16 0c0 4.627-3.582 10-8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+        </span>
+        <span class="contact-link">Atlanta, Georgia</span>
+      </div>
+    </div>
   </section>
 </div>
 

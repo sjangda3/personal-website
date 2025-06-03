@@ -16,11 +16,9 @@
     return Math.random() * (b - a) + a;
   }
 
-  // split the page into thirds (0-100, 100-200, 200-300vh)
+  // Create blobs randomly distributed throughout the page
   let blobs = [];
-  // ensure at least 2 blobs in each third
-  for (let i = 0; i < 6; i++) {
-    const section = Math.floor(i / 2);
+  for (let i = 0; i < 15; i++) {
     blobs.push({
       id: i,
       width: randomBetween(80, 180),
@@ -28,21 +26,7 @@
       color1: randomColor(),
       color2: randomColor(),
       x: randomBetween(0, 90),
-      y: randomBetween(section * 100, (section + 1) * 100 - 20),
-      vx: randomBetween(-0.08, 0.08),
-      vy: randomBetween(-0.08, 0.08)
-    });
-  }
-  // add the rest randomly
-  for (let i = 6; i < 15; i++) {
-    blobs.push({
-      id: i,
-      width: randomBetween(80, 180),
-      height: randomBetween(80, 180),
-      color1: randomColor(),
-      color2: randomColor(),
-      x: randomBetween(0, 90),
-      y: randomBetween(0, 280),
+      y: randomBetween(0, 200),
       vx: randomBetween(-0.08, 0.08),
       vy: randomBetween(-0.08, 0.08)
     });
@@ -55,7 +39,7 @@
       y += vy;
       // bounce off walls
       const maxX = 100 - (width / window.innerWidth * 100);
-      const maxY = 300 - (height / window.innerHeight * 100);
+      const maxY = 200 - (height / window.innerHeight * 100);
       if (x < 0) { x = 0; vx *= -1; }
       if (x > maxX) { x = maxX; vx *= -1; }
       if (y < 0) { y = 0; vy *= -1; }
@@ -87,7 +71,7 @@
 <style>
 .blobs-bg {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 300vh;
+  top: 0; left: 0; width: 100%; height: 209.5vh;
   pointer-events: none;
   z-index: 0;
 }

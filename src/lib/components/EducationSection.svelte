@@ -40,7 +40,7 @@
 <style>
 /* education section two-column layout */
 .education-section {
-  min-height: 35vh;
+  min-height: 30vh;
   padding-top: 2rem;
 }
 .education-grid {
