@@ -1,5 +1,12 @@
 <script>
-  // no script logic needed for static content
+  const allCourses = [
+    { icon: '</>', name: 'Data Structures and Algorithms', altCourse: 'Design and Analysis of Algorithms' },
+    { icon: '</>', name: 'Object-Oriented Programming', altCourse: 'Robotics and Perception' },
+    { icon: '</>', name: 'Computer Organization', altCourse: 'UI Design' },
+    { icon: '+', name: 'Linear Algebra', altCourse: 'Discrete Math' }
+  ];
+
+  $: displayedCourses = allCourses;
 </script>
 
 <!-- education section with two-column layout -->
@@ -15,22 +22,20 @@
     </div>
     <div class="education-right">
       <h2 class="section-heading">Coursework</h2>
-      <div class="coursework-grid">
-        <div class="course-card">
-          <span class="course-icon">&lt;/&gt;</span>
-          <span>Data Structures and Algorithms</span>
-        </div>
-        <div class="course-card">
-          <span class="course-icon">&lt;/&gt;</span>
-          <span>Object-Oriented Programming</span>
-        </div>
-        <div class="course-card">
-          <span class="course-icon">+</span>
-          <span>Discrete Math</span>
-        </div>
-        <div class="course-card">
-          <span class="course-icon">+</span>
-          <span>Linear Algebra</span>
+      <div class="coursework-container">
+        <div class="coursework-grid">
+          {#each displayedCourses as course}
+            <div class="course-card">
+              <div class="card-front">
+                <span class="course-icon">{course.icon}</span>
+                <span>{course.name}</span>
+              </div>
+              <div class="card-back">
+                <span class="course-icon">{course.icon}</span>
+                <span>{course.altCourse}</span>
+              </div>
+            </div>
+          {/each}
         </div>
       </div>
     </div>
@@ -60,13 +65,9 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.coursework-heading {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 1.2rem;
-  /* coursework heading style */
+.coursework-container {
+  position: relative;
+  width: 100%;
 }
 .coursework-grid {
   display: grid;
@@ -74,6 +75,7 @@
   gap: 1rem;
   width: 100%;
   align-items: stretch;
+  transition: transform 0.3s ease;
 }
 .course-card {
   background: #23232a;
@@ -89,13 +91,43 @@
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
-  transition: background 0.18s, transform 0.18s;
+  transition: all 0.45s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
+
+.card-front, .card-back {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  transition: opacity 0.45s ease;
+}
+
+.card-back {
+  position: absolute;
+  top: 1.6rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 1.6rem;
+  opacity: 0;
+  background: rgb(35, 35, 73);
+}
+
+.course-card:hover .card-front {
+  opacity: 0;
+}
+
+.course-card:hover .card-back {
+  opacity: 1;
+}
+
 .course-card:hover {
-  background:rgb(35, 35, 73);
   transform: scale(1.05);
+  background: rgb(35, 35, 73);
 }
+
 .course-icon {
   font-size: 1.2rem;
   color: #aeefff;
@@ -105,6 +137,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .education-details {
   font-size: 1.25rem;
   color:rgb(215, 223, 228);
@@ -118,7 +151,7 @@
   font-size: 2.35rem;
   background: linear-gradient(180deg, #ffffff,rgb(68, 200, 233));
   color: transparent;
-  -webkit-background-clip: text;x
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
