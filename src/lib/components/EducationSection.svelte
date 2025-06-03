@@ -76,9 +76,10 @@
   align-items: stretch;
 }
 .course-card {
-  background: rgb(25, 25, 27);
+  background: #23232a;
   color: #f3f3f3;
   border-radius: 0.7rem;
+  border: 1px solid #353545;
   padding: 1.6rem 2rem;
   min-height: 4.2rem;
   font-size: 1.15rem;
@@ -109,6 +110,7 @@
   color:rgb(215, 223, 228);
   margin-top: 0.3rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 .section-heading {
   font-family: 'Inter', sans-serif;

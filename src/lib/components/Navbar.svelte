@@ -2,7 +2,7 @@
   class="navbar"
   style="
     top: 1rem;
-    width: 68%;
+    width: 62%;
     border-radius: 0.75rem;
     margin-left: auto;
     margin-right: auto;
@@ -56,6 +56,7 @@
   align-items: center;
   justify-content: center;
   background: transparent;
+  border: 1px solid #353545;
 }
 .navbar-bg {
   /* All styles are inline for dynamic border-radius */
@@ -80,7 +81,7 @@
 }
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 .navbar-links a {
   color: #fff;
@@ -92,7 +93,7 @@
   font-weight: 400;
 }
 .navbar-links a:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(225, 16, 159, 0.4);
   transform: scale(1.08);
 }
 .home-btn {
@@ -106,7 +107,7 @@
   transition: background 0.2s, transform 0.18s cubic-bezier(0.4,0,0.2,1);
 }
 .home-btn:hover {
-  background: rgba(255,255,255,0.08);
-  transform: scale(1.08);
+  background: rgba(225, 16, 159, 0.4);
+  transform: scale(1.1);
 }
 </style>
