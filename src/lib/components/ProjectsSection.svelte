@@ -7,26 +7,18 @@
 <section class="projects-section">
   <h1 class="section-heading">Projects</h1>
   <div class="projects-grid">
-    <div class="project-card">
+    <a class="project-card" href="https://github.com/your-sonderly-app" target="_blank" rel="noopener">
       <img class="project-img" src="/placeholder-spotify.png" alt="Sonderly" />
       <div class="project-title">Sonderly | AI Language Translator</div>
-      <div class="project-desc">An AI-powered voice translation tool that enables real-time, cross-language conversations through speech recognition, intelligent translation, and speech synthesis.</div>
-    </div>
-    <div class="project-card">
-      <img class="project-img" src="/placeholder-arabic.png" alt="Arabic Language Partner" />
-      <div class="project-title">Arabic Language Partner</div>
-      <div class="project-desc">An interactive platform that helps users practice and learn Arabic through real-time conversations with a language partner. Perfect for English speakers looking to enhance their conversational Arabic skills with a focus on dialect.</div>
-    </div>
-    <div class="project-card">
-      <img class="project-img" src="/placeholder-aws.png" alt="AWS-Powered Photo Hub" />
-      <div class="project-title">AWS-Powered Photo Hub</div>
-      <div class="project-desc">Developing a scalable photo storage feature with AWS Lambda, using serverless functions to automatically handle increased traffic by instantiating multiple function instances, removing the need for manual scaling.</div>
-    </div>
-    <div class="project-card">
-      <img class="project-img" src="/placeholder-budget.png" alt="SpendWise | Budgeting Application" />
-      <div class="project-title">SpendWise | Budgeting Application</div>
-      <div class="project-desc">Developed a budgeting app to simplify financial management by integrating the 50-30-20 rule algorithm.</div>
-    </div>
+      <div class="project-desc">An AI-powered voice translation tool that enables real-time, cross-language conversations through speech recognition, intelligent translation, and speech synthesis.
+It helps users connect more naturally across language barriers by turning spoken words into seamless, two-way dialogue.</div>
+    </a>
+    <a class="project-card" href="https://github.com/sjangda3/FitJacket" target="_blank" rel="noopener">
+      <img class="project-img" src="/FitJacket.png" alt="FitJacket" />
+      <div class="project-title">FitJacket</div>
+      <div class="project-desc">A full-stack fitness tracking app built with Django and SvelteKit that lets users log workouts, track progress, and view interactive stats. It features real-time Strava integration and uses the OpenAI API to generate personalized fitness insights based on user activity.
+</div>
+    </a>
   </div>
 </section>
 
@@ -43,6 +35,8 @@
   margin-top: 1.5rem;
 }
 .project-card {
+  text-decoration: none;
+  color: inherit;
   background: #23232a;
   border: 1px solid #353545;
   border-radius: 1rem;
@@ -61,6 +55,7 @@
   width: 100%;
   height: 170px;
   object-fit: cover;
+  object-position: center top;
   background: #19191b;
   border-bottom: 1px solid #353545;
 }
