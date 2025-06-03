@@ -14,7 +14,7 @@
     class="navbar-bg"
     style="
       border-radius: 0.75rem;
-      background: linear-gradient(to bottom, rgba(9, 9, 9, 0.85) 0%, rgba(56, 31, 87, 0.85) 100%);
+      background: linear-gradient(to bottom, rgba(9, 9, 9, 0.80) 0%, rgba(56, 31, 87, 0.80) 100%);
       position: absolute;
       inset: 0;
       z-index: 0;

@@ -14,7 +14,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 3rem;
-  background: linear-gradient(180deg, #ffffff, #aeefff);
+  background: linear-gradient(180deg, #ffffff,rgb(83, 203, 233));
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23,8 +23,8 @@
 .section-heading {
   font-family: 'Inter', sans-serif;
   font-weight: 575;
-  font-size: 1.8rem;
-  background: linear-gradient(180deg, #ffffff, #aeefff);
+  font-size: 2.35rem;
+  background: linear-gradient(180deg, #ffffff,rgb(68, 200, 233));
   color: transparent;
   -webkit-background-clip: text;x
   -webkit-text-fill-color: transparent;
@@ -33,7 +33,7 @@
 .intro-buttons {
   display: flex;
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1.1rem;
 }
 .intro-btn {
   display: flex;
@@ -58,8 +58,12 @@
 }
 </style>
 
+<script>
+  import EducationSection from '$lib/components/EducationSection.svelte';
+</script>
+
 <div class="main-content">
-  <section id="intro" style="min-height: 30vh; padding-top: 6.5rem;">
+  <section id="intro" style="min-height: 35vh; padding-top: 6.5rem;">
     <h1 class="sameer-heading">Hi, I'm Sameer Jangda</h1>
     <div class="intro-buttons">
       <a class="intro-btn" href="https://www.linkedin.com/in/sameerjangda/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -75,17 +79,13 @@
         Resume
       </a>
     </div>
-    <!-- Add your intro content here -->
   </section>
-  <section id="education" style="min-height: 80vh; padding-top: 2rem;">
-    <h1 class="section-heading">Education</h1>
-    <!-- Add your education content here -->
-  </section>
-  <section id="projects" style="min-height: 80vh; padding-top: 2rem;">
+  <EducationSection />
+  <section id="projects" style="min-height: 40vh; padding-top: 2rem;">
     <h1 class="section-heading">Projects</h1>
     <!-- Add your projects content here -->
   </section>
-  <section id="contact" style="min-height: 80vh; padding-top: 2rem;">
+  <section id="contact" style="min-height: 40vh; padding-top: 2rem;">
     <h1 class="section-heading">Contact</h1>
     <!-- Add your contact content here -->
   </section>
