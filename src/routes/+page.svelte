@@ -44,7 +44,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: .9rem;
-  padding: 0.55rem 2.2rem;
+  padding: 0.75rem 2.405rem;
   border: none;
   border-radius: 0.4rem;
   text-decoration: none;
@@ -60,10 +60,11 @@
 
 <script>
   import EducationSection from '$lib/components/EducationSection.svelte';
+  import ProjectsSection from '$lib/components/ProjectsSection.svelte';
 </script>
 
 <div class="main-content">
-  <section id="intro" style="min-height: 35vh; padding-top: 6.5rem;">
+  <section id="intro" style="min-height: 30vh; padding-top: 6.5rem;">
     <h1 class="sameer-heading">Hi, I'm Sameer Jangda</h1>
     <div class="intro-buttons">
       <a class="intro-btn" href="https://www.linkedin.com/in/sameerjangda/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -81,10 +82,7 @@
     </div>
   </section>
   <EducationSection />
-  <section id="projects" style="min-height: 40vh; padding-top: 2rem;">
-    <h1 class="section-heading">Projects</h1>
-    <!-- Add your projects content here -->
-  </section>
+  <ProjectsSection />
   <section id="contact" style="min-height: 40vh; padding-top: 2rem;">
     <h1 class="section-heading">Contact</h1>
     <!-- Add your contact content here -->
