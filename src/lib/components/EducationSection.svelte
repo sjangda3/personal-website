@@ -3,7 +3,7 @@
 </script>
 
 <!-- education section with two-column layout -->
-<section class="education-section">
+<section class="education-section" id="education">
   <div class="education-grid">
     <div class="education-left">
       <h1 class="section-heading">Education</h1>

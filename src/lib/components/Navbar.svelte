@@ -2,7 +2,6 @@
   class="navbar"
   style="
     top: 1rem;
-    width: 62%;
     border-radius: 0.75rem;
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +56,11 @@
   justify-content: center;
   background: transparent;
   border: 1px solid #353545;
+  width: 1150px;
+  max-width: 95vw;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .navbar-bg {
   /* All styles are inline for dynamic border-radius */

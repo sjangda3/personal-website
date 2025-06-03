@@ -4,7 +4,7 @@
 </script>
 
 <!-- projects section with grid of cards -->
-<section class="projects-section">
+<section class="projects-section" id="projects">
   <h1 class="section-heading">Projects</h1>
   <div class="projects-grid">
     <a class="project-card" href="https://github.com/your-sonderly-app" target="_blank" rel="noopener">
