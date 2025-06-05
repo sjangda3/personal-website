@@ -320,7 +320,7 @@
 </script>
 
 <div class="main-content">
-  <section id="intro" style="min-height: 40vh; padding-top: 6rem;">
+  <section id="intro" style="min-height: 30vh; padding-top: 4rem;">
     <div class="intro-grid">
       <div class="intro-left">
         <h1 class="sameer-heading">Hi, I'm Sameer Jangda</h1>
@@ -359,7 +359,7 @@
         <span class="contact-icon">
           <svg width="22" height="22" fill="none" stroke="#eaf6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>
         </span>
-        <a class="contact-link" href="mailto:sameer.jangda@gmail.com">sameer.jangda@email.com</a>
+        <a class="contact-link" href="mailto:sameer.jangda@gmail.com">sameer.jangda@gmail.com</a>
       </div>
       <div class="contact-row">
         <span class="contact-icon"> 

@@ -2,7 +2,7 @@
   const allCourses = [
     { icon: '</>', name: 'Data Structures and Algorithms', altCourse: 'Design and Analysis of Algorithms' },
     { icon: '</>', name: 'Object-Oriented Programming', altCourse: 'Robotics and Perception' },
-    { icon: '</>', name: 'Computer Organization', altCourse: 'UI Design' },
+    { icon: '</>', name: 'Computer Organization and Programming', altCourse: 'UI Design' },
     { icon: '+', name: 'Linear Algebra', altCourse: 'Discrete Math' }
   ];
 

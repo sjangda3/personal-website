@@ -16,7 +16,7 @@
     return Math.random() * (b - a) + a;
   }
 
-  // Create blobs randomly distributed throughout the page
+  // create blobs randomly distributed throughout the page
   let blobs = [];
   for (let i = 0; i < 15; i++) {
     blobs.push({
@@ -71,7 +71,7 @@
 <style>
 .blobs-bg {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 209.5vh;
+  top: 0; left: 0; width: 100%; height: 200vh;
   pointer-events: none;
   z-index: 0;
 }
