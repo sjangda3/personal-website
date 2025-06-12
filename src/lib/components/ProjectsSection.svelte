@@ -7,11 +7,11 @@
 <section class="projects-section" id="projects">
   <h1 class="section-heading">Projects</h1>
   <div class="projects-grid">
-    <a class="project-card" href="https://github.com/your-sonderly-app" target="_blank" rel="noopener">
-      <img class="project-img" src="/sonderly" alt="Sonderly" />
+    <a class="project-card" href="https://sonder-nine-beta.vercel.app/" target="_blank" rel="noopener">
+      <img class="project-img" src="/sonderly.png" alt="Sonderly" />
       <div class="project-title">Sonderly | AI Language Translator</div>
-      <div class="project-desc">An AI-powered voice translation tool that enables real-time, cross-language conversations through speech recognition, intelligent translation, and speech synthesis.
-It helps users connect more naturally across language barriers by turning spoken words into seamless, two-way dialogue.</div>
+      <div class="project-desc">A voice translation tool that lets you have natural, real-time conversations across languages. It recognizes speech, translates instantly, and speaks back the translation, helping you easily communicate despite language barriers.
+</div>
     </a>
     <a class="project-card" href="https://github.com/sjangda3/FitJacket" target="_blank" rel="noopener">
       <img class="project-img" src="/FitJacket.png" alt="FitJacket" />
