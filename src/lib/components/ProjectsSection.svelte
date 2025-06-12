@@ -8,7 +8,7 @@
   <h1 class="section-heading">Projects</h1>
   <div class="projects-grid">
     <a class="project-card" href="https://github.com/your-sonderly-app" target="_blank" rel="noopener">
-      <img class="project-img" src="/placeholder-spotify.png" alt="Sonderly" />
+      <img class="project-img" src="/sonderly" alt="Sonderly" />
       <div class="project-title">Sonderly | AI Language Translator</div>
       <div class="project-desc">An AI-powered voice translation tool that enables real-time, cross-language conversations through speech recognition, intelligent translation, and speech synthesis.
 It helps users connect more naturally across language barriers by turning spoken words into seamless, two-way dialogue.</div>
