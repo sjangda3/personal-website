@@ -10,6 +10,11 @@
     width: 90%;
   }
 }
+@media (max-width: 768px) {
+  .main-content {
+    width: 95%;
+  }
+}
 .sameer-heading {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -20,20 +25,46 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+@media (max-width: 768px) {
+  .sameer-heading {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .sameer-heading {
+    font-size: 1.8rem;
+  }
+}
 .section-heading {
   font-family: 'Inter', sans-serif;
   font-weight: 575;
   font-size: 2.35rem;
   background: linear-gradient(180deg, #ffffff,rgb(68, 200, 233));
   color: transparent;
-  -webkit-background-clip: text;x
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
 }
 .intro-buttons {
   display: flex;
   gap: .9rem;
   margin-top: 1.1rem;
+}
+@media (max-width: 768px) {
+  .intro-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
 }
 .intro-btn {
   display: flex;
@@ -52,6 +83,13 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .intro-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
 }
 .intro-btn:hover, .intro-btn:focus {
   border-color: rgba(83, 203, 233, 1);
@@ -73,6 +111,17 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.8rem 1.5rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .contact-card::before {
@@ -106,6 +155,18 @@
   position: relative;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  .contact-row {
+    font-size: 1rem;
+    gap: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-row {
+    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+}
 
 .contact-card:hover .contact-row {
   transform: translateX(8px);
@@ -117,6 +178,11 @@
   justify-content: center;
   min-width: 2.2rem;
   transition: transform 0.3s ease;
+}
+@media (max-width: 480px) {
+  .contact-icon {
+    min-width: 1.8rem;
+  }
 }
 
 .contact-card:hover .contact-icon {
@@ -130,6 +196,16 @@
   font-size: 1.18rem;
   transition: all 0.2s ease;
   position: relative;
+}
+@media (max-width: 768px) {
+  .contact-link {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact-link {
+    font-size: 0.9rem;
+  }
 }
 
 .contact-link::after {
@@ -310,6 +386,26 @@
     width: 220px;
     height: 150px;
     transform: scale(0.9);
+  }
+}
+@media (max-width: 768px) {
+  .intro-grid {
+    gap: 1.5rem;
+  }
+  .color-palette {
+    width: 180px;
+    height: 120px;
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 480px) {
+  .intro-grid {
+    gap: 1rem;
+  }
+  .color-palette {
+    width: 150px;
+    height: 100px;
+    transform: scale(0.7);
   }
 }
 </style>

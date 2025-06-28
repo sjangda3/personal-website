@@ -25,6 +25,24 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1.125rem; }
 
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.3rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
+}
+
 p {
   color: #f3f3f3;
   font-size: 1.1rem;
@@ -32,10 +50,30 @@ p {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
 hr {
   border: none;
   border-top: 1px solid rgba(255,255,255,0.2);
   margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  hr {
+    margin: 1.5rem 0;
+  }
 }
 
 .main-content {
@@ -50,8 +88,30 @@ hr {
     width: 90%;
   }
 }
+@media (max-width: 768px) {
+  .main-content {
+    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .main-content {
+    width: 98%;
+  }
+}
 
 html {
   scroll-padding-top: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 3rem;
+  }
 }
   

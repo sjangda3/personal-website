@@ -62,6 +62,20 @@
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 768px) {
+  .navbar {
+    width: 98vw;
+    height: 4rem;
+    top: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    width: 99vw;
+    height: 3.5rem;
+    top: 0.25rem;
+  }
+}
 .navbar-bg {
   /* All styles are inline for dynamic border-radius */
 }
@@ -73,6 +87,16 @@
   width: 100%;
   padding: 1.25rem 2.5rem;
 }
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 1rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-content {
+    padding: 0.75rem 1rem;
+  }
+}
 .navbar-title {
   color: #fff;
   font-size: 1.1rem;
@@ -83,9 +107,24 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .navbar-title {
+    padding: 0.5rem 0.75rem;
+  }
+}
 .navbar-links {
   display: flex;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-links {
+    gap: 0.25rem;
+  }
 }
 .navbar-links a {
   color: #fff;
@@ -95,6 +134,18 @@
   border-radius: 3.5px;
   transition: background 0.2s, transform 0.18s cubic-bezier(0.4,0,0.2,1);
   font-weight: 400;
+}
+@media (max-width: 768px) {
+  .navbar-links a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-links a {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.5rem;
+  }
 }
 .navbar-links a:hover {
   background: rgba(225, 16, 159, 0.4);
@@ -109,6 +160,15 @@
   display: flex;
   align-items: center;
   transition: background 0.2s, transform 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+@media (max-width: 480px) {
+  .home-btn {
+    padding: 0.4rem;
+  }
+  .home-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 .home-btn:hover {
   background: rgba(225, 16, 159, 0.4);

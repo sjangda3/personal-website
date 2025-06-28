@@ -48,11 +48,27 @@
   min-height: 30vh;
   padding-top: 2rem;
 }
+@media (max-width: 768px) {
+  .education-section {
+    padding-top: 1.5rem;
+  }
+}
 .education-grid {
   display: flex;
   gap: 3.5rem;
   align-items: flex-start;
   justify-content: center;
+}
+@media (max-width: 900px) {
+  .education-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .education-grid {
+    gap: 1.5rem;
+  }
 }
 .education-left {
   flex: 1 1 0;
@@ -77,6 +93,12 @@
   align-items: stretch;
   transition: transform 0.3s ease;
 }
+@media (max-width: 768px) {
+  .coursework-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
 .course-card {
   background: #23232a;
   color: #f3f3f3;
@@ -96,6 +118,20 @@
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .course-card {
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    min-height: 3.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .course-card {
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+    min-height: 3rem;
+  }
+}
 
 .card-front, .card-back {
   display: flex;
@@ -113,6 +149,22 @@
   bottom: 1.6rem;
   opacity: 0;
   background: rgb(35, 35, 73);
+}
+@media (max-width: 768px) {
+  .card-back {
+    top: 1.2rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .card-back {
+    top: 1rem;
+    left: 1.2rem;
+    right: 1.2rem;
+    bottom: 1rem;
+  }
 }
 
 .course-card:hover .card-front {
@@ -137,6 +189,18 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .course-icon {
+    font-size: 1rem;
+    width: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .course-icon {
+    font-size: 0.9rem;
+    width: 1.6rem;
+  }
+}
 
 .education-details {
   font-size: 1.25rem;
@@ -144,6 +208,16 @@
   margin-top: 0.3rem;
   font-weight: 500;
   line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .education-details {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 480px) {
+  .education-details {
+    font-size: 1rem;
+  }
 }
 .section-heading {
   font-family: 'Inter', sans-serif;
@@ -154,5 +228,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
 }
 </style> 
