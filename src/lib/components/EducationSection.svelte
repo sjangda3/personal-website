@@ -17,7 +17,7 @@
       <div class="education-details">
         <div>Georgia Institute of Technology</div>
         <div>Bachelor of Science (BS) in Computer Science</div>
-        <div>Expected Graduation: Dec 2026</div>
+        <div>Expected Graduation: May 2027</div>
       </div>
     </div>
     <div class="education-right">
