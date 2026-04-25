@@ -27,19 +27,18 @@
   ];
 </script>
 
-<main class="page">
+<main class="page" id="top">
   <section class="section intro">
     <h1 class="intro-heading">Sameer Jangda</h1>
     <p class="intro-sub">I'm a <span class="hl">full-stack developer</span> based in Atlanta, studying CS at Georgia Tech. I also do <span class="hl">motion graphics</span> on the side.</p>
     <div class="intro-links">
-      <a href="mailto:sameer.jangda@gmail.com" class="intro-link">Email</a>
       <a href="https://github.com/sjangda3" target="_blank" rel="noopener" class="intro-link">GitHub</a>
       <a href="https://www.linkedin.com/in/sameerjangda/" target="_blank" rel="noopener" class="intro-link">LinkedIn</a>
       <a href="/resume.pdf" target="_blank" rel="noopener" class="intro-link">Resume</a>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="education">
     <h1 class="heading">Education</h1>
     <div class="experience-list">
       <div class="exp-row">
@@ -61,7 +60,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="experience">
     <h1 class="heading">Experience</h1>
     <div class="experience-list">
       {#each experiences as exp}
@@ -85,7 +84,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="projects">
     <h1 class="heading">Projects</h1>
     <div class="project">
       <div class="project-frame">
@@ -210,12 +209,14 @@
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease, transform 0.3s ease;
   }
 
   .intro-link:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    background: #0a0a0a;
+    color: #fff;
+    border-color: #0a0a0a;
+    transform: scale(1.04);
   }
 
   .heading {
